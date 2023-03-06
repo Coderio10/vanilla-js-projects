@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --bgcolor: rebeccapurple;
+    --text: white;
+    --mainbgcolor: rgb(38, 4, 73);
+    --pwpadding: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgcolor);
+    color: var(--text);
+}
+
+input, button {
+    font-weight: inherit;
+}
+
+.pw-container {
+    background-color: var(--mainbgcolor);
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.pw-header {
+    padding: var(--pwpadding);
+}
+
+.pw {
+    height: 70px;
+    background-color: var(--bgcolor);
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-size: 2rem;
+    padding: var(--pwpadding); 
+}
+.pw button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(0, -50%);
+    padding: 0.25rem;
+    font-weight: bold;
+    right: 0;
+    top: 0;
+    color: rgb(29, 2, 56);
+    border: none;
+    background-color: var(--text);
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    width: 60px;
+    height: 40px;
+}
+.pw:hover > button {
+    opacity: 1;
+    transform: translate(0, -100%);
+}
+.pw #copy.copied {
+    opacity: 0.7;
+} 
+.pw-body {
+    padding: 0 1rem 1rem;
+}
+
+.form-control {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem 0;
+}
+
+.generate {
+    display: block;
+    background-color: #ecb602;
+    color: var(--bgcolor);
+    padding: 0.5rem;
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1.5rem
+}
